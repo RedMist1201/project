@@ -38,10 +38,11 @@
                 background-color: white;
     	        box-shadow:0 2px 3px rgba(0, 0, 0, 0.336);
                 color: black;
+                text-align: center;
             }
             footer
             {
-                position: absolute;
+                position: fixed;
                 bottom: 0;
                 left: 0;
                 height: 3vw;
@@ -95,6 +96,49 @@
                 left: 2vw;
                 font-size: 1vw;
             }
+            .column 
+            {
+                float: left;
+                width: 25%;
+                padding: 10px;
+            }
+            .column img 
+            {
+                opacity: 0.8; 
+                cursor: pointer; 
+            }
+            .column img:hover 
+            {
+            opacity: 1;
+            }
+            .row:after 
+            {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            .container 
+            {
+            position: relative;
+            display: none;
+            }
+            #imgtext 
+            {
+                position: absolute;
+                bottom: 15px;
+                left: 15px;
+                color: white;
+                font-size: 20px;
+            }
+            .closebtn 
+            {
+                position: absolute;
+                top: 10px;
+                right: 15px;
+                color: white;
+                font-size: 35px;
+                cursor: pointer;
+            }
         </style>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
@@ -103,6 +147,7 @@
             <img src="imgs/klops.png" style="height: 6vw; width:11vw;">
             <div class="menu_links">
                 <button class="nupp" ><a href="gallery.html">Galerii</a></button>
+                <button class="nupp">Kontaktid</button>
                 <button class="nupp">Login</button>
                 <div class="menüü ">
                     <button class="nupp">Keel</button>
@@ -114,12 +159,67 @@
                 </div>
             </div>
         </div>  
-        <div id="mid_box">
-            This is literally just random text just to make division visible
+        <div id="mid_box">        
+            <div style="text-align:center">
+                <br>
+                <br>
+                <h2>Galerii</h2>
+                <p>Pildid interaktiivsed, vajuta peale ja näitab suurelt allpool:</p>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <img src="imgs/1.jpg" alt="Canon EF 15mm f2.8 FISHEYE" style="width:100%" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="imgs/2.jpg" alt="Canon EOS 400D" style="width:100%" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="imgs/3.jpg" alt="Canon Speedlite 580EX II" style="width:100%" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="imgs/4.jpg" alt="Canon TS-E 24mm f3.5 L" style="width:100%" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="imgs/5.jpg" alt="Nikon AF-S NIKKOR 85mm f1.8G" style="width:100%" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="imgs/6.jpg" alt="Nikon AF-S VR 105mm f2.8G IF-ED" style="width:100%" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="imgs/7.jpg" alt="Nikon D7000" style="width:100%" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="imgs/8.jpg" alt="Sigma Nikon 20mm f1.4 DG" style="width:100%" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="imgs/9.jpg" alt="Sigma Nikon 50mm f1.4 DG " style="width:100%" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="imgs/10.jpg" alt="Tamron Canon SP AF 70-200mm F2.8 DI USD" style="width:100%" onclick="myFunction(this);">
+                </div>
+            </div>
+            <div class="container">
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <img id="expandedImg" style="width:100%">
+                <div id="imgtext"></div>
+            </div>
+            <script>
+            function myFunction(imgs) 
+            {
+                var expandImg = document.getElementById("expandedImg");
+                var imgText = document.getElementById("imgtext");
+                expandImg.src = imgs.src;
+                imgText.innerHTML = imgs.alt;
+                expandImg.parentElement.style.display = "block";
+            }
+            </script>
         </div>
         <footer>
         <div class="alustext">
-            <h3>© Klõps 2019 </h5>
+            <h3>© Klõps 2019 </h3>
+            <a href="#" style="position:fixed; right: 2vw; bottom: 0.5vw;"><img src="imgs/twitter.png" style="width: 2vw; height: 2vw;"></a>
+            <a href="#" style="position:fixed; right: 5vw; bottom: 0.5vw;"><img src="imgs/instagr.png" style="width: 2vw; height: 2vw;"></a>
+            <a href="#" style="position:fixed; right: 8vw; bottom: 0.5vw;"><img src="imgs/facebook.png" style="width: 2vw; height: 2vw;"></a>
         </div>
         </footer>
     </body>
