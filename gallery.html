@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Kardo Talvik | MM-16 | Klõps</title>
+        <style>
+            body
+            {
+                color: white;
+                left: 15px;
+                background-size: 100% 100%;
+                background-attachment:fixed;
+                background: url('imgs/background.jpg');
+            }
+            .menu_block
+            {
+                left:-5px;
+                top:-5px;
+                right:0;
+                height:6vw;
+                width:100%;
+                margin-bottom: 2vw;
+                background-color:#fff;
+                box-shadow:0 2px 3px rgba(0,0,0,0.3);
+            }
+            .menu_links
+            {
+                margin: auto;
+                float: right;
+                height: 6vw;
+
+            }
+            #mid_box
+            {
+                margin: auto;
+                left: 10%;
+                right: 10%;
+                width: 80%;
+                background-color: white;
+    	        box-shadow:0 2px 3px rgba(0, 0, 0, 0.336);
+                color: black;
+            }
+            footer
+            {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 3vw;
+                width: 100%;
+                background-color:#fff;
+                color: black;
+                box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+            }
+            .nupp 
+            {
+                padding: 2.4vw;
+                font-size: 16px;
+                border: none;
+            }
+            .menüü 
+            {
+                position: relative;
+                display: inline-block;
+            }
+            .menüü-content 
+            {
+                display: none;
+                position: absolute;
+                background-color: #f1f1f1;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+            .menüü-content a 
+            {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+            .menüü-content a:hover 
+            {
+                background-color: #ddd;
+            }
+            .menüü:hover .menüü-content 
+            {
+                display: block;
+            }
+            a
+            {
+                text-decoration: none;
+            }
+            h3
+            {
+                position: absolute;
+                left: 2vw;
+                font-size: 1vw;
+            }
+        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+	    <div class="menu_block">
+            <img src="imgs/klops.png" style="height: 6vw; width:11vw;">
+            <div class="menu_links">
+                <button class="nupp" ><a href="gallery.html">Gallery</a></button>
+                <button class="nupp">Login</button>
+                <div class="menüü ">
+                    <button class="nupp">Language</button>
+                    <div class="menüü-content">
+                        <a href="#">Eesti</a>
+                        <a href="#">English</a>
+                        <a href="#">Suomi</a>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <div id="mid_box">
+            This is literally just random text just to make division visible
+        </div>
+        <footer>
+        <div class="alustext">
+            <h3>© Klõps 2019 </h5>
+        </div>
+        </footer>
+    </body>
+</html>
